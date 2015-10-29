@@ -15,12 +15,6 @@ describe Player do
     end
   end
 
-  describe '#attack' do
-    it 'player one attacks player two' do
-      expect{player_one.attack player_two}.to change{player_two.hitpoints}.by(-10)
-    end
-  end
-
   describe '#damage' do
     it 'deducts hitpoints by 10' do
       expect(player_two.damage).to eq (Player::DEFAULT_HP - 10)
