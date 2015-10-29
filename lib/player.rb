@@ -3,9 +3,9 @@ class Player
 
   DEFAULT_HP = 100
 
-  def initialize(name)
+  def initialize(name, hitpoints = DEFAULT_HP)
     @name = name
-    @hitpoints = DEFAULT_HP
+    @hitpoints = hitpoints
   end
 
   def attack(player)
