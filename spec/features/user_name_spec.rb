@@ -1,5 +1,4 @@
-
-require 'spec_helper.rb'
+require 'spec_helper'
 
   feature 'Players enter their names' do
     scenario 'player 1 enters their name' do
