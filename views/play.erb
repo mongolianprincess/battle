@@ -2,6 +2,11 @@
   <iframe src="//giphy.com/embed/5xtDarHj0ORdxfWtV6g" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="http://giphy.com/gifs/bigblueboo-space-scifi-hyperspace-5xtDarHj0ORdxfWtV6g">via GIPHY</a></p>-->
 
 <div style="text-align: center">
-<h1><%= @player1_name %> vs. <%= @player2_name %></h1>
-<h3><%= @player2_name %> 100/100HP</h3>
+  <h1><%= @player1_name %> vs. <%= @player2_name %></h1>
+  <h3><%= @player2_name %> 100/100HP</h3>
+<div>
+  <form action = '/attack'>
+  <input type = "submit" value = 'Attack'>
+  </form>
+</div>
 </div>
