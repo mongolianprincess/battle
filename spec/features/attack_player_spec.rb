@@ -14,14 +14,19 @@ feature 'A player attacks' do
     expect(page).to have_content('The Empire 90/100HP')
   end
 
-  scenario 'players we switch turns' do
+  scenario 'players switch turns' do
+    sign_in_and_play
+    click_button('Attack')
+    click_button('Continue battle')
+    expect(find("input[type=\"submit\"]").value).to eq 'Attack Rebel Alliance'
+  end
+  scenario 'players we switch turns and continue battle' do
     sign_in_and_play
     click_button('Attack')
     click_button('Continue battle')
     click_button('Attack Rebel Alliance')
     expect(page).to have_content('The Empire attacked Rebel Alliance')
   end
-
 
 
 end
