@@ -31,4 +31,23 @@ end
       game.attack player_two
     end
   end
+
+  describe '#current_player' do
+    it 'indicates current player (attacker)' do
+      expect(game.current_player).to eq player_one
+    end
+  end
+
+  describe '#switch_player' do
+    it 'switches current_player' do
+      game.switch_player
+      expect(game.current_player).to eq player_two
+    end
+  end
+
+  describe '#other_player' do
+    it 'indicates non-current player' do
+      expect(game.other_player).to eq player_two
+    end
+  end
 end
