@@ -6,6 +6,8 @@
 
 <div style="text-align: center">
   <h1><%= @game.player_one_name %> vs. <%= @game.player_two_name %></h1>
+  <h2>Battle Turn: <%=@game.current_player.name %></h2>
+  <h3><%= @game.player_one_name %> <%= @game.player_one_hitpoints %>/100HP</h3>
   <h3><%= @game.player_two_name %> <%= @game.player_two_hitpoints %>/100HP</h3>
 <div>
   <form action = '/attack'>
